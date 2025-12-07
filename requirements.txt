@@ -1,10 +1,9 @@
 cmake
+numpy
 opencv-python-headless
 dlib
 Flask
-numpy
 Pillow
 face-recognition
 requests
 gunicorn
-
