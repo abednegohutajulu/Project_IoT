@@ -1,6 +1,0 @@
-Flask
-numpy
-Pillow
-face-recognition
-requests
-gunicorn
