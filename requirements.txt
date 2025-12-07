@@ -4,3 +4,5 @@ Pillow
 face-recognition
 requests
 gunicorn
+cmake
+dlib
