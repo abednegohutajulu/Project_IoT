@@ -5,7 +5,7 @@ from PIL import Image
 import os
 import requests # <--- LIBRARY PENTING BUAT TELEGRAM
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # ==========================================================
 # KONFIGURASI TELEGRAM (WAJIB DIGANTI!)
@@ -140,6 +140,6 @@ def upload_image():
         print(f">> ERROR SISTEM FATAL: {e}")
         return jsonify({"status": "error", "pesan": str(e)})
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     print("--> SERVER SIAP. Pastikan Token Telegram Benar!")
     app.run(host='0.0.0.0', port=5000, debug=True)
