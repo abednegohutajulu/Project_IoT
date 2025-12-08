@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 import face_recognition
 import numpy as np
 from PIL import Image
@@ -51,6 +51,20 @@ def kirim_telegram(pesan, path_gambar):
 @app.route('/')
 def home():
     return "SERVER LOKER PINTAR + TELEGRAM SIAP."
+    
+@app.route('/lihat-foto')
+def lihat_foto_terakhir():
+    nama_file = "cek_hasil_foto.jpg"
+    try:
+        # Cek apakah file ada?
+        if os.path.exists(nama_file):
+            # Tampilkan gambar di browser
+            return send_file(nama_file, mimetype='image/jpeg')
+        else:
+            return "<h2>Belum ada foto yang diambil.</h2><p>Coba tekan tombol di ESP32 dulu.</p>"
+    except Exception as e:
+        return f"Error saat membuka foto: {e}"
+# ===============================================
 
 @app.route('/upload', methods=['POST'])
 def upload_image():
