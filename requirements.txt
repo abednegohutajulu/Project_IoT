@@ -1,9 +1,10 @@
-Flask
+cmake
 numpy
+opencv-python-headless
+# Dlib Matang khusus Python 3.9 (Pasti Cocok)
+https://github.com/sachinruk/dlib_prebuilt/raw/main/dlib-19.24.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Flask
 Pillow
+face-recognition
 requests
 gunicorn
-opencv-python-headless
-# Dlib yang sudah matang untuk Python 3.11
-https://github.com/sachinruk/dlib_prebuilt/raw/main/dlib-19.24.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-face-recognition
